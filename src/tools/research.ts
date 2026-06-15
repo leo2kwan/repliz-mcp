@@ -1,0 +1,67 @@
+/** Research tools: search Threads content and users. */
+
+import { z } from "zod";
+import { registerTool, type ToolContext } from "./helpers.js";
+
+export function registerResearchTools(ctx: ToolContext): void {
+  registerTool(
+    ctx,
+    "repliz_search_threads_content",
+    {
+      title: "Search Threads Content",
+      description:
+        "Search public Threads posts by keyword. Requires a connected Threads account id (used to authorize the search). Uses cursor pagination via `nextToken`.",
+      inputSchema: {
+        accountId: z.string().describe("A connected Threads account id to search with."),
+        search: z.string().describe("The keyword or phrase to search for."),
+        nextToken: z.string().optional().describe("Pagination cursor from a previous response."),
+      },
+    },
+    async (args) =>
+      ctx.client.get("/public/research/threads/content/search", {
+        accountId: args.accountId,
+        search: args.search,
+        nextToken: args.nextToken,
+      })
+  );
+
+  registerTool(
+    ctx,
+    "repliz_search_threads_user_content",
+    {
+      title: "Get Threads User Content",
+      description:
+        "Fetch public Threads posts authored by a specific username. Requires a connected Threads account id. Uses cursor pagination via `nextToken`.",
+      inputSchema: {
+        accountId: z.string().describe("A connected Threads account id to search with."),
+        username: z.string().describe("The Threads username whose posts to fetch."),
+        nextToken: z.string().optional().describe("Pagination cursor from a previous response."),
+      },
+    },
+    async (args) =>
+      ctx.client.get("/public/research/threads/content/user", {
+        accountId: args.accountId,
+        username: args.username,
+        nextToken: args.nextToken,
+      })
+  );
+
+  registerTool(
+    ctx,
+    "repliz_search_threads_user",
+    {
+      title: "Get Threads User Profile",
+      description:
+        "Look up the public profile of a Threads user by username. Requires a connected Threads account id.",
+      inputSchema: {
+        accountId: z.string().describe("A connected Threads account id to search with."),
+        username: z.string().describe("The Threads username to look up."),
+      },
+    },
+    async (args) =>
+      ctx.client.get("/public/research/threads/user", {
+        accountId: args.accountId,
+        username: args.username,
+      })
+  );
+}
