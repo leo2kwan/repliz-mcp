@@ -84,6 +84,7 @@ function buildSchedulePayload(args: {
   replies?: unknown[];
   scheduleAt: string;
   templateId?: string;
+  accountId?: string;  // required for create, not used for update
 }) {
   return {
     title: args.title ?? "",
@@ -95,6 +96,7 @@ function buildSchedulePayload(args: {
     additionalInfo: { ...DEFAULT_ADDITIONAL_INFO, ...(args.additionalInfo ?? {}) },
     replies: args.replies ?? [],
     scheduleAt: args.scheduleAt,
+    ...(args.accountId ? { accountId: args.accountId } : {}),
     ...(args.templateId ? { templateId: args.templateId } : {}),
   };
 }
@@ -183,6 +185,7 @@ export function registerScheduleTools(ctx: ToolContext): void {
       },
     },
     async (args) => ctx.client.post("/public/schedule", buildSchedulePayload(args))
+    // note: accountId is picked up by buildSchedulePayload from args and sent in the request body.
   );
 
   registerTool(
@@ -249,6 +252,7 @@ export function registerScheduleTools(ctx: ToolContext): void {
         scheduleIds: z.array(z.string()).min(1).describe("The schedule ids to delete."),
       },
     },
+    // scheduleIds is a query parameter (not body) per the API spec
     async (args) => ctx.client.delete("/public/schedule/mass", { scheduleIds: args.scheduleIds })
   );
 }
