@@ -10,20 +10,28 @@
             "name": "page",
             "required": true,
             "in": "query",
-            "schema": { "example": 1, "type": "number" }
+            "schema": {
+              "example": 1,
+              "type": "number"
+            }
           },
           {
             "name": "limit",
             "required": true,
             "in": "query",
-            "schema": { "example": 20, "type": "number" }
+            "schema": {
+              "example": 20,
+              "type": "number"
+            }
           },
           {
             "name": "types",
             "required": false,
             "in": "query",
             "schema": {
-              "example": ["facebook"],
+              "example": [
+                "facebook"
+              ],
               "type": "array",
               "items": {
                 "type": "string",
@@ -42,7 +50,10 @@
             "name": "search",
             "required": false,
             "in": "query",
-            "schema": { "example": "Azickri", "type": "string" }
+            "schema": {
+              "example": "Azickri",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -81,9 +92,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Account",
-        "tags": ["API Account (Standard+)"]
+        "tags": [
+          "API Account (Standard+)"
+        ]
       }
     },
     "/public/account/count": {
@@ -112,9 +129,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Count Account",
-        "tags": ["API Account (Standard+)"]
+        "tags": [
+          "API Account (Standard+)"
+        ]
       }
     },
     "/public/account/{accountId}": {
@@ -145,7 +168,10 @@
                   "picture": "https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/e77d82e1747fb47fdda2395827153a19~tplv-tiktokx-cropcenter:168:168.jpeg?dr=14577&refresh_token=ada7df22&x-expires=1771236000&x-signature=w%2F1c2jMikhIrAuSAgVggmiXfRQs%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=8aecc5ac&idc=maliva",
                   "isConnected": true,
                   "type": "tiktok",
-                  "token": { "access": "", "refresh": "" },
+                  "token": {
+                    "access": "",
+                    "refresh": ""
+                  },
                   "userId": "6879b98097fc8c8a78d1d4c1",
                   "createdAt": "2026-02-02T02:30:45.329Z",
                   "updatedAt": "2026-03-20T07:00:01.664Z",
@@ -159,14 +185,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get One Account",
-        "tags": ["API Account (Standard+)"]
+        "tags": [
+          "API Account (Standard+)"
+        ]
       },
       "delete": {
         "description": "\nRemove a connected account from the system.\n\nThis endpoint is used to disconnect and delete an account from your workspace.\nOnce removed, the account will no longer be accessible and cannot be used for any operations such as fetching content, comments, or posting.\n\nParameters:\n- accountId (string) — The unique identifier of the account\n\nResponse:\n- No content is returned on success (204 No Content)\n",
@@ -183,19 +218,30 @@
           }
         ],
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "404": {
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Remove Account",
-        "tags": ["API Account (Standard+)"]
+        "tags": [
+          "API Account (Standard+)"
+        ]
       }
     },
     "/public/comment": {
@@ -207,13 +253,19 @@
             "name": "page",
             "required": true,
             "in": "query",
-            "schema": { "example": 1, "type": "number" }
+            "schema": {
+              "example": 1,
+              "type": "number"
+            }
           },
           {
             "name": "limit",
             "required": true,
             "in": "query",
-            "schema": { "example": 20, "type": "number" }
+            "schema": {
+              "example": 20,
+              "type": "number"
+            }
           },
           {
             "name": "status",
@@ -222,7 +274,11 @@
             "schema": {
               "example": "pending",
               "type": "string",
-              "enum": ["pending", "resolved", "ignored"]
+              "enum": [
+                "pending",
+                "resolved",
+                "ignored"
+              ]
             }
           },
           {
@@ -230,16 +286,23 @@
             "required": false,
             "in": "query",
             "schema": {
-              "example": ["680affa5ce12f2f72916f67e"],
+              "example": [
+                "680affa5ce12f2f72916f67e"
+              ],
               "type": "array",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
             "name": "search",
             "required": false,
             "in": "query",
-            "schema": { "example": "Wahoyyy", "type": "string" }
+            "schema": {
+              "example": "Wahoyyy",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -269,7 +332,9 @@
                             "url": "https://scontent.fbdo9-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQP50FFJDOWngZ-8wXiUM937LOfvRH59rG2rjoNhIPpwTLPfEFifJ23NQ3YAKvupcr4i4VOGIG8Iy0RV1TNqyJlomBMuT7ponQ3YhJwipRxZkQ.mp4?_nc_cat=105&_nc_oc=Adl9VSMr5nyqTmqW9-_nwKMXL-dp1q8Wy9CFNU7nEqG3EdJsyqB2XohJlzoPEkc053ruJtxmsaK8mLLKa8DbS8M4&_nc_sid=5e9851&_nc_ht=scontent.fbdo9-1.fna.fbcdn.net&_nc_ohc=I4OsMq3hgmAQ7kNvwGLa2-M&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjgzODIwNDQ5NTkxMzg2MSwiYXNzZXRfYWdlX2RheXMiOjI1LCJ2aV91c2VjYXNlX2lkIjoxMDEyMiwiZHVyYXRpb25fcyI6MTMxLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=a40780894ba4ec64&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DMTQ3OTZENkNBMUM4N0I4NzFFNzE2MEE3QTZBNDNBMV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzJFNDE0NzMwQUMxNzgxOTI2QUQyRTc2NzAwMDIxNzhBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaKjtOT9pX9AhUCKAJDMywXQGBzMzMzMzMYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUCZZSeAQA&_nc_gid=Op_y0Q7-XRnkZY9osBA6Ew&edm=AJfPMC4EAAAA&_nc_zt=28&_nc_eui2=AeH1tZPCyf6BmA4q-dEciVASmWAUPtY2INOZYBQ-1jYg07dcqn-n5doxRek-32GsjQmgCMGW07JzsZp3eZGkkjDC&_nc_tpa=Q5bMBQHNKNBgRCW7avOGFwHMBtGcwFKZrZ7pi3JIYfvdoMZ6fs2uzrcf89g6Phd7cSY3FkHm7QC7gVSGdw&oh=00_Afw1MAGFSpr81TIN8ZoTlZJ7N9XSVbKp7N_D_cNQTpd6YQ&oe=69B5B1CF&bitrate=528652&tag=dash_h264-basic-gen2_720p"
                           }
                         ],
-                        "statistic": { "comment": 3 },
+                        "statistic": {
+                          "comment": 3
+                        },
                         "url": "https://facebook.com/113958387982006_916614914406921",
                         "createdAt": "2026-02-13T00:39:00.000Z",
                         "hasAutomation": false
@@ -323,9 +388,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Comment",
-        "tags": ["API Comment (Standard+)"]
+        "tags": [
+          "API Comment (Standard+)"
+        ]
       }
     },
     "/public/comment/{commentId}": {
@@ -368,7 +439,9 @@
                         "url": "https://scontent.fbdo9-1.fna.fbcdn.net/o1/v/t2/f2/m366/AQP50FFJDOWngZ-8wXiUM937LOfvRH59rG2rjoNhIPpwTLPfEFifJ23NQ3YAKvupcr4i4VOGIG8Iy0RV1TNqyJlomBMuT7ponQ3YhJwipRxZkQ.mp4?_nc_cat=105&_nc_oc=Adl9VSMr5nyqTmqW9-_nwKMXL-dp1q8Wy9CFNU7nEqG3EdJsyqB2XohJlzoPEkc053ruJtxmsaK8mLLKa8DbS8M4&_nc_sid=5e9851&_nc_ht=scontent.fbdo9-1.fna.fbcdn.net&_nc_ohc=I4OsMq3hgmAQ7kNvwGLa2-M&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5GQUNFQk9PSy4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjgzODIwNDQ5NTkxMzg2MSwiYXNzZXRfYWdlX2RheXMiOjI1LCJ2aV91c2VjYXNlX2lkIjoxMDEyMiwiZHVyYXRpb25fcyI6MTMxLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=a40780894ba4ec64&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DMTQ3OTZENkNBMUM4N0I4NzFFNzE2MEE3QTZBNDNBMV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzJFNDE0NzMwQUMxNzgxOTI2QUQyRTc2NzAwMDIxNzhBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaKjtOT9pX9AhUCKAJDMywXQGBzMzMzMzMYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUCZZSeAQA&_nc_gid=Op_y0Q7-XRnkZY9osBA6Ew&edm=AJfPMC4EAAAA&_nc_zt=28&_nc_eui2=AeH1tZPCyf6BmA4q-dEciVASmWAUPtY2INOZYBQ-1jYg07dcqn-n5doxRek-32GsjQmgCMGW07JzsZp3eZGkkjDC&_nc_tpa=Q5bMBQHNKNBgRCW7avOGFwHMBtGcwFKZrZ7pi3JIYfvdoMZ6fs2uzrcf89g6Phd7cSY3FkHm7QC7gVSGdw&oh=00_Afw1MAGFSpr81TIN8ZoTlZJ7N9XSVbKp7N_D_cNQTpd6YQ&oe=69B5B1CF&bitrate=528652&tag=dash_h264-basic-gen2_720p"
                       }
                     ],
-                    "statistic": { "comment": 3 },
+                    "statistic": {
+                      "comment": 3
+                    },
                     "url": "https://facebook.com/113958387982006_916614914406921",
                     "createdAt": "2026-02-13T00:39:00.000Z",
                     "hasAutomation": false
@@ -414,14 +487,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "comment not found" }
+                "example": {
+                  "code": 404,
+                  "message": "comment not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get One Comment",
-        "tags": ["API Comment (Standard+)"]
+        "tags": [
+          "API Comment (Standard+)"
+        ]
       },
       "post": {
         "description": "\nSend a reply to a stored comment.\n\nThis endpoint is used to respond to a comment that exists in the system.\nThe reply will be sent to the original platform where the comment was created.\n\nParameters:\n- commentId (string) — The unique identifier of the comment\n\nResponse:\n- Returns the created reply object\n- Includes id, message, and timestamp\n",
@@ -441,7 +523,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyReplyCommentDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyReplyCommentDTO"
+              }
             }
           }
         },
@@ -450,7 +534,9 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "commentId": "942538351814577_1677536300098026" }
+                "example": {
+                  "commentId": "942538351814577_1677536300098026"
+                }
               }
             }
           },
@@ -458,14 +544,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "comment not found" }
+                "example": {
+                  "code": 404,
+                  "message": "comment not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reply Comment",
-        "tags": ["API Comment (Standard+)"]
+        "tags": [
+          "API Comment (Standard+)"
+        ]
       }
     },
     "/public/comment/{commentId}/status": {
@@ -494,19 +589,30 @@
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "404": {
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "comment not found" }
+                "example": {
+                  "code": 404,
+                  "message": "comment not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Update Status Comment",
-        "tags": ["API Comment (Standard+)"]
+        "tags": [
+          "API Comment (Standard+)"
+        ]
       }
     },
     "/public/tiktok/music": {
@@ -899,7 +1005,12 @@
             "schema": {
               "example": "7DAY",
               "type": "string",
-              "enum": ["1DAY", "7DAY", "30DAY", "90DAY"]
+              "enum": [
+                "1DAY",
+                "7DAY",
+                "30DAY",
+                "90DAY"
+              ]
             }
           }
         ],
@@ -927,14 +1038,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 400, "message": "invalid account" }
+                "example": {
+                  "code": 400,
+                  "message": "invalid account"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get TikTok Music",
-        "tags": ["API Addon (Premium+)"]
+        "tags": [
+          "API Addon (Premium+)"
+        ]
       }
     },
     "/public/shopee/product": {
@@ -991,9 +1111,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Shopee Product",
-        "tags": ["API Addon (Premium+)"]
+        "tags": [
+          "API Addon (Premium+)"
+        ]
       }
     },
     "/public/link/metadata": {
@@ -1005,7 +1131,10 @@
             "name": "url",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -1023,9 +1152,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Link Metadata",
-        "tags": ["API Addon (Premium+)"]
+        "tags": [
+          "API Addon (Premium+)"
+        ]
       }
     },
     "/public/schedule": {
@@ -1037,22 +1172,32 @@
             "name": "page",
             "required": true,
             "in": "query",
-            "schema": { "example": 1, "type": "number" }
+            "schema": {
+              "example": 1,
+              "type": "number"
+            }
           },
           {
             "name": "limit",
             "required": true,
             "in": "query",
-            "schema": { "example": 20, "type": "number" }
+            "schema": {
+              "example": 20,
+              "type": "number"
+            }
           },
           {
             "name": "accountIds",
             "required": false,
             "in": "query",
             "schema": {
-              "example": ["680affa5ce12f2f72916f67e"],
+              "example": [
+                "680affa5ce12f2f72916f67e"
+              ],
               "type": "array",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
@@ -1062,7 +1207,12 @@
             "schema": {
               "example": "pending",
               "type": "string",
-              "enum": ["pending", "process", "error", "success"]
+              "enum": [
+                "pending",
+                "process",
+                "error",
+                "success"
+              ]
             }
           },
           {
@@ -1071,7 +1221,7 @@
             "in": "query",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-13T01:00:57.380Z",
+              "example": "2026-07-08T00:40:45.256Z",
               "type": "string"
             }
           },
@@ -1081,7 +1231,7 @@
             "in": "query",
             "schema": {
               "format": "date-time",
-              "example": "2026-06-13T01:00:57.380Z",
+              "example": "2026-07-08T00:40:45.256Z",
               "type": "string"
             }
           }
@@ -1235,9 +1385,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Schedule",
-        "tags": ["API Schedule (Premium+)"]
+        "tags": [
+          "API Schedule (Premium+)"
+        ]
       },
       "post": {
         "description": "\nCreate a new scheduled post.\n\nThis endpoint is used to schedule content publishing to supported platforms at a specified time.\n\nSupported Post Types:\n- Text → Facebook, Threads\n- Image → Facebook, Instagram, Threads, TikTok, LinkedIn\n- Video → Facebook, Instagram, Threads, TikTok, YouTube, LinkedIn\n- Reels → Facebook\n- Album → Facebook, Instagram, Threads, TikTok, LinkedIn\n- Link → Facebook\n- Story → Facebook, Instagram\n\nResponse:\n- Returns the created scheduleId\n",
@@ -1259,7 +1415,11 @@
                     "topic": "AI Threads",
                     "type": "text",
                     "medias": [],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1273,11 +1433,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.387Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "image": {
@@ -1296,7 +1457,11 @@
                         "url": "https://storage.repliz.com/image.png"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1310,11 +1475,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "video": {
@@ -1333,7 +1499,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1347,11 +1517,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "reel": {
@@ -1370,7 +1541,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1384,11 +1559,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "album": {
@@ -1413,7 +1589,11 @@
                         "url": "https://storage.repliz.com/image.png"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1427,11 +1607,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "link": {
@@ -1468,11 +1649,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "story": {
@@ -1491,7 +1673,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1505,11 +1691,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "nested": {
@@ -1520,7 +1707,11 @@
                     "topic": "AI Threads",
                     "type": "text",
                     "medias": [],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1534,7 +1725,8 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [
                       {
@@ -1569,7 +1761,7 @@
                       }
                     ],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "template": {
@@ -1580,7 +1772,11 @@
                     "topic": "AI Threads",
                     "type": "text",
                     "medias": [],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1594,11 +1790,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z",
+                    "scheduleAt": "2026-07-08T00:40:45.262Z",
                     "templateId": "680affa5ce12f2f72a16f67c"
                   }
                 },
@@ -1618,11 +1815,17 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
-                      "collaborators": ["replizofficial"],
+                      "collaborators": [
+                        "replizofficial"
+                      ],
                       "music": {
                         "id": "",
                         "artist": "",
@@ -1632,11 +1835,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "additionaoInfoMusic": {
@@ -1655,7 +1859,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1669,11 +1877,12 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "additionalInfoProduct": {
@@ -1692,7 +1901,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1714,11 +1927,12 @@
                       ],
                       "tags": [],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "additionalInfoTag": {
@@ -1737,7 +1951,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1749,13 +1967,17 @@
                         "thumbnail": ""
                       },
                       "products": [],
-                      "tags": ["AI YouTube", "AI Trend 2026"],
+                      "tags": [
+                        "AI YouTube",
+                        "AI Trend 2026"
+                      ],
                       "mentions": [],
-                      "link": ""
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "additionalInfoMention": {
@@ -1774,7 +1996,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1787,12 +2013,15 @@
                       },
                       "products": [],
                       "tags": [],
-                      "mentions": ["replizofficial"],
-                      "link": ""
+                      "mentions": [
+                        "replizofficial"
+                      ],
+                      "link": "",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
                   }
                 },
                 "additionaoInfoLink": {
@@ -1811,7 +2040,11 @@
                         "url": "https://storage.repliz.com/video.mp4"
                       }
                     ],
-                    "meta": { "title": "", "description": "", "url": "" },
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
                     "additionalInfo": {
                       "isAiGenerated": false,
                       "isDraft": false,
@@ -1825,11 +2058,56 @@
                       "products": [],
                       "tags": [],
                       "mentions": [],
-                      "link": "https://repliz.com"
+                      "link": "https://repliz.com",
+                      "targetCountries": []
                     },
                     "replies": [],
                     "accountId": "680affa5ce12f2f72916f67e",
-                    "scheduleAt": "2026-06-13T01:00:57.388Z"
+                    "scheduleAt": "2026-07-08T00:40:45.262Z"
+                  }
+                },
+                "additionalInfoTargetCountries": {
+                  "summary": "Post with Additional Info Target Countries",
+                  "value": {
+                    "title": "",
+                    "description": "Hola! This is example for post video with mentions",
+                    "topic": "",
+                    "type": "video",
+                    "medias": [
+                      {
+                        "alt": "",
+                        "customThumbnail": false,
+                        "type": "video",
+                        "thumbnail": "https://storage.repliz.com/thumbnail.png",
+                        "url": "https://storage.repliz.com/video.mp4"
+                      }
+                    ],
+                    "meta": {
+                      "title": "",
+                      "description": "",
+                      "url": ""
+                    },
+                    "additionalInfo": {
+                      "isAiGenerated": false,
+                      "isDraft": false,
+                      "collaborators": [],
+                      "music": {
+                        "id": "",
+                        "artist": "",
+                        "name": "",
+                        "thumbnail": ""
+                      },
+                      "products": [],
+                      "tags": [],
+                      "mentions": [],
+                      "link": "",
+                      "targetCountries": [
+                        "ID"
+                      ]
+                    },
+                    "replies": [],
+                    "accountId": "680affa5ce12f2f72916f67e",
+                    "scheduleAt": "2026-07-08T00:40:45.263Z"
                   }
                 }
               }
@@ -1841,7 +2119,9 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "scheduleId": "69c7532ff0c3b7c83ab9e681" }
+                "example": {
+                  "scheduleId": "69c7532ff0c3b7c83ab9e681"
+                }
               }
             }
           },
@@ -1852,20 +2132,32 @@
                 "examples": {
                   "schedule": {
                     "summary": "Schedule",
-                    "value": { "code": 404, "message": "schedule not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "schedule not found"
+                    }
                   },
                   "account": {
                     "summary": "Account",
-                    "value": { "code": 404, "message": "account not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "account not found"
+                    }
                   }
                 }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Create Schedule",
-        "tags": ["API Schedule (Premium+)"]
+        "tags": [
+          "API Schedule (Premium+)"
+        ]
       }
     },
     "/public/schedule/{scheduleId}": {
@@ -1954,14 +2246,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "schedule not found" }
+                "example": {
+                  "code": 404,
+                  "message": "schedule not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get One Schedule",
-        "tags": ["API Schedule (Premium+)"]
+        "tags": [
+          "API Schedule (Premium+)"
+        ]
       },
       "put": {
         "description": "\nUpdate an existing scheduled post.\n\nThis endpoint is used to modify scheduled content, including its content, schedule time, or target platform.\n\nSupported Post Types:\n- Text → Facebook, Threads\n- Image → Facebook, Instagram, Threads, TikTok, LinkedIn\n- Video → Facebook, Instagram, Threads, TikTok, YouTube, LinkedIn\n- Reels → Facebook\n- Album → Facebook, Instagram, Threads, TikTok, LinkedIn\n- Link → Facebook\n- Story → Facebook, Instagram\n\nParameters:\n- scheduleId (string) — The unique identifier of the schedule\n\nResponse:\n- No content is returned on success (204 No Content)\n",
@@ -1988,19 +2289,30 @@
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "404": {
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "schedule not found" }
+                "example": {
+                  "code": 404,
+                  "message": "schedule not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Update Schedule",
-        "tags": ["API Schedule (Premium+)"]
+        "tags": [
+          "API Schedule (Premium+)"
+        ]
       },
       "delete": {
         "description": "\nDelete a scheduled post.\n\nThis endpoint is used to remove a schedule so it will not be executed.\n\nParameters:\n- scheduleId (string) — The unique identifier of the schedule\n\nResponse:\n- No content is returned on success (204 No Content)\n",
@@ -2017,19 +2329,30 @@
           }
         ],
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "404": {
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "schedule not found" }
+                "example": {
+                  "code": 404,
+                  "message": "schedule not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Remove Schedule",
-        "tags": ["API Schedule (Premium+)"]
+        "tags": [
+          "API Schedule (Premium+)"
+        ]
       }
     },
     "/public/schedule/{scheduleId}/retry": {
@@ -2048,19 +2371,30 @@
           }
         ],
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "404": {
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "schedule not found" }
+                "example": {
+                  "code": 404,
+                  "message": "schedule not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Retry Schedule",
-        "tags": ["API Schedule (Premium+)"]
+        "tags": [
+          "API Schedule (Premium+)"
+        ]
       }
     },
     "/public/schedule/mass": {
@@ -2078,14 +2412,26 @@
                 "680affa5ce12f2f72916f67a"
               ],
               "type": "array",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             }
           }
         ],
-        "responses": { "204": { "description": "" } },
-        "security": [{ "basic": [] }],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Remove Schedules",
-        "tags": ["API Schedule (Premium+)"]
+        "tags": [
+          "API Schedule (Premium+)"
+        ]
       }
     },
     "/public/chat": {
@@ -2097,13 +2443,19 @@
             "name": "page",
             "required": true,
             "in": "query",
-            "schema": { "example": 1, "type": "number" }
+            "schema": {
+              "example": 1,
+              "type": "number"
+            }
           },
           {
             "name": "limit",
             "required": true,
             "in": "query",
-            "schema": { "example": 20, "type": "number" }
+            "schema": {
+              "example": 20,
+              "type": "number"
+            }
           },
           {
             "name": "status",
@@ -2112,7 +2464,10 @@
             "schema": {
               "example": "unread",
               "type": "string",
-              "enum": ["unread", "unreplied"]
+              "enum": [
+                "unread",
+                "unreplied"
+              ]
             }
           },
           {
@@ -2120,16 +2475,23 @@
             "required": false,
             "in": "query",
             "schema": {
-              "example": ["680affa5ce12f2f72916f67e"],
+              "example": [
+                "680affa5ce12f2f72916f67e"
+              ],
               "type": "array",
-              "items": { "type": "string" }
+              "items": {
+                "type": "string"
+              }
             }
           },
           {
             "name": "search",
             "required": false,
             "in": "query",
-            "schema": { "example": "Azickri", "type": "string" }
+            "schema": {
+              "example": "Azickri",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2191,9 +2553,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Chat",
-        "tags": ["API Chat (Gold+)"]
+        "tags": [
+          "API Chat (Gold+)"
+        ]
       }
     },
     "/public/chat/{chatId}": {
@@ -2260,14 +2628,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "chat not found" }
+                "example": {
+                  "code": 404,
+                  "message": "chat not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get One Chat",
-        "tags": ["API Chat (Gold+)"]
+        "tags": [
+          "API Chat (Gold+)"
+        ]
       }
     },
     "/public/chat/{chatId}/message": {
@@ -2288,13 +2665,19 @@
             "name": "page",
             "required": true,
             "in": "query",
-            "schema": { "example": 1, "type": "number" }
+            "schema": {
+              "example": 1,
+              "type": "number"
+            }
           },
           {
             "name": "limit",
             "required": true,
             "in": "query",
-            "schema": { "example": 20, "type": "number" }
+            "schema": {
+              "example": 20,
+              "type": "number"
+            }
           }
         ],
         "responses": {
@@ -2351,9 +2734,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Message",
-        "tags": ["API Chat (Gold+)"]
+        "tags": [
+          "API Chat (Gold+)"
+        ]
       },
       "post": {
         "description": "\nSend a message to a specific chat.\n\nThis endpoint is used to send a new message within a conversation.\nThe message can include text or other supported content types.\n\nParameters:\n- chatId (string) — The unique identifier of the chat\n\nResponse:\n- Returns the sent message object\n- Includes id, content, sender, and timestamp\n",
@@ -2373,7 +2762,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodySendMessageDTO" },
+              "schema": {
+                "$ref": "#/components/schemas/BodySendMessageDTO"
+              },
               "examples": {
                 "text": {
                   "summary": "Send Text",
@@ -2487,20 +2878,32 @@
                 "examples": {
                   "chat": {
                     "summary": "Chat",
-                    "value": { "code": 404, "message": "chat not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "chat not found"
+                    }
                   },
                   "account": {
                     "summary": "Account",
-                    "value": { "code": 404, "message": "account not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "account not found"
+                    }
                   }
                 }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Send Message",
-        "tags": ["API Chat (Gold+)"]
+        "tags": [
+          "API Chat (Gold+)"
+        ]
       }
     },
     "/public/chat/{chatId}/read": {
@@ -2519,19 +2922,30 @@
           }
         ],
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "404": {
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "chat not found" }
+                "example": {
+                  "code": 404,
+                  "message": "chat not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Read Chat",
-        "tags": ["API Chat (Gold+)"]
+        "tags": [
+          "API Chat (Gold+)"
+        ]
       }
     },
     "/public/content": {
@@ -2564,7 +2978,10 @@
             "schema": {
               "example": "media",
               "type": "string",
-              "enum": ["media", "story"]
+              "enum": [
+                "media",
+                "story"
+              ]
             }
           }
         ],
@@ -2689,14 +3106,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Content",
-        "tags": ["API Content (Gold+)"]
+        "tags": [
+          "API Content (Gold+)"
+        ]
       }
     },
     "/public/content/{contentId}": {
@@ -2760,20 +3186,32 @@
                 "examples": {
                   "account": {
                     "summary": "Account",
-                    "value": { "code": 404, "message": "account not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "account not found"
+                    }
                   },
                   "content": {
                     "summary": "Content",
-                    "value": { "code": 404, "message": "content not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "content not found"
+                    }
                   }
                 }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get One Content",
-        "tags": ["API Content (Gold+)"]
+        "tags": [
+          "API Content (Gold+)"
+        ]
       }
     },
     "/public/content/{contentId}/comment": {
@@ -2812,7 +3250,10 @@
             "name": "commentId",
             "required": false,
             "in": "query",
-            "schema": { "example": "18083576267346315", "type": "string" }
+            "schema": {
+              "example": "18083576267346315",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -2883,14 +3324,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Comment",
-        "tags": ["API Content (Gold+)"]
+        "tags": [
+          "API Content (Gold+)"
+        ]
       },
       "post": {
         "description": "\nCreate a new comment on a specific content in the platform.\n\nThis endpoint is used to post a comment directly to the platform under a selected content item.\n\nParameters:\n- contentId (string) — The unique identifier of the content\n\nResponse:\n- Returns the created comment object\n- Includes id, message, author, and timestamp\n",
@@ -2910,7 +3360,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyCreateCommentDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyCreateCommentDTO"
+              }
             }
           }
         },
@@ -2919,7 +3371,9 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "commentId": "942538351814577_1677536300098026" }
+                "example": {
+                  "commentId": "942538351814577_1677536300098026"
+                }
               }
             }
           },
@@ -2930,20 +3384,32 @@
                 "examples": {
                   "account": {
                     "summary": "Account",
-                    "value": { "code": 404, "message": "account not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "account not found"
+                    }
                   },
                   "content": {
                     "summary": "Comment",
-                    "value": { "code": 404, "message": "comment not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "comment not found"
+                    }
                   }
                 }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Create Comment",
-        "tags": ["API Content (Gold+)"]
+        "tags": [
+          "API Content (Gold+)"
+        ]
       }
     },
     "/public/content/{contentId}/statistic": {
@@ -2978,7 +3444,11 @@
                 "examples": {
                   "facebook": {
                     "summary": "Facebook",
-                    "value": { "like": 10, "comment": 10, "share": 10 }
+                    "value": {
+                      "like": 10,
+                      "comment": 10,
+                      "share": 10
+                    }
                   },
                   "instagram": {
                     "summary": "Instagram",
@@ -3028,7 +3498,10 @@
                   },
                   "linkedin": {
                     "summary": "LinkedIn",
-                    "value": { "like": 10, "comment": 10 }
+                    "value": {
+                      "like": 10,
+                      "comment": 10
+                    }
                   },
                   "shopee": {
                     "summary": "Shopee",
@@ -3074,20 +3547,32 @@
                 "examples": {
                   "account": {
                     "summary": "Account",
-                    "value": { "code": 404, "message": "account not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "account not found"
+                    }
                   },
                   "content": {
                     "summary": "Statistic",
-                    "value": { "code": 404, "message": "statistic not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "statistic not found"
+                    }
                   }
                 }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Statistic",
-        "tags": ["API Content (Gold+)"]
+        "tags": [
+          "API Content (Gold+)"
+        ]
       }
     },
     "/public/content/{contentId}/message": {
@@ -3178,20 +3663,32 @@
                 "examples": {
                   "account": {
                     "summary": "Account",
-                    "value": { "code": 404, "message": "account not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "account not found"
+                    }
                   },
                   "content": {
                     "summary": "Comment",
-                    "value": { "code": 404, "message": "comment not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "comment not found"
+                    }
                   }
                 }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Message Comment",
-        "tags": ["API Content (Gold+)"]
+        "tags": [
+          "API Content (Gold+)"
+        ]
       }
     },
     "/public/content/{contentId}/comment/{commentId}": {
@@ -3212,7 +3709,10 @@
             "name": "commentId",
             "required": true,
             "in": "path",
-            "schema": { "example": "113958387982006", "type": "string" }
+            "schema": {
+              "example": "113958387982006",
+              "type": "string"
+            }
           },
           {
             "name": "accountId",
@@ -3225,7 +3725,9 @@
           }
         ],
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "404": {
             "description": "",
             "content": {
@@ -3233,20 +3735,32 @@
                 "examples": {
                   "account": {
                     "summary": "Account",
-                    "value": { "code": 404, "message": "account not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "account not found"
+                    }
                   },
                   "content": {
                     "summary": "Comment",
-                    "value": { "code": 404, "message": "comment not found" }
+                    "value": {
+                      "code": 404,
+                      "message": "comment not found"
+                    }
                   }
                 }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Remove Comment",
-        "tags": ["API Content (Gold+)"]
+        "tags": [
+          "API Content (Gold+)"
+        ]
       }
     },
     "/public/research/threads/content/search": {
@@ -3267,7 +3781,10 @@
             "name": "search",
             "required": true,
             "in": "query",
-            "schema": { "example": "Video", "type": "string" }
+            "schema": {
+              "example": "Video",
+              "type": "string"
+            }
           },
           {
             "name": "nextToken",
@@ -3310,14 +3827,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Search Content Threads",
-        "tags": ["API Research (Gold+)"]
+        "tags": [
+          "API Research (Gold+)"
+        ]
       }
     },
     "/public/research/threads/content/user": {
@@ -3338,7 +3864,10 @@
             "name": "username",
             "required": true,
             "in": "query",
-            "schema": { "example": "meta", "type": "string" }
+            "schema": {
+              "example": "meta",
+              "type": "string"
+            }
           },
           {
             "name": "nextToken",
@@ -3362,7 +3891,11 @@
                       "title": "",
                       "description": "weeds are no match for @aiatmeta",
                       "type": "video",
-                      "owner": { "id": "", "name": "", "picture": "" },
+                      "owner": {
+                        "id": "",
+                        "name": "",
+                        "picture": ""
+                      },
                       "medias": [
                         {
                           "type": "video",
@@ -3383,14 +3916,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Search Content User Threads",
-        "tags": ["API Research (Gold+)"]
+        "tags": [
+          "API Research (Gold+)"
+        ]
       }
     },
     "/public/research/threads/user": {
@@ -3411,7 +3953,10 @@
             "name": "username",
             "required": true,
             "in": "query",
-            "schema": { "example": "meta", "type": "string" }
+            "schema": {
+              "example": "meta",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3440,14 +3985,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Search  User Threads",
-        "tags": ["API Research (Gold+)"]
+        "tags": [
+          "API Research (Gold+)"
+        ]
       }
     },
     "/public/account/facebook/authorize": {
@@ -3459,7 +4013,10 @@
             "name": "redirect",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3474,9 +4031,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Authorize Facebook",
-        "tags": ["API Account Facebook (Gold+)"]
+        "tags": [
+          "API Account Facebook (Gold+)"
+        ]
       }
     },
     "/public/account/facebook/page": {
@@ -3514,9 +4077,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Page Facebook",
-        "tags": ["API Account Facebook (Gold+)"]
+        "tags": [
+          "API Account Facebook (Gold+)"
+        ]
       }
     },
     "/public/account/facebook/exchange": {
@@ -3546,9 +4115,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Exchange Facebook",
-        "tags": ["API Account Facebook (Gold+)"]
+        "tags": [
+          "API Account Facebook (Gold+)"
+        ]
       }
     },
     "/public/account/facebook/connect": {
@@ -3571,14 +4146,22 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "accountId": "680affa5ce12f2f72916f67e" }
+                "example": {
+                  "accountId": "680affa5ce12f2f72916f67e"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Connect Facebook",
-        "tags": ["API Account Facebook (Gold+)"]
+        "tags": [
+          "API Account Facebook (Gold+)"
+        ]
       }
     },
     "/public/account/facebook/connect/{accountId}": {
@@ -3607,7 +4190,9 @@
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "400": {
             "description": "",
             "content": {
@@ -3623,14 +4208,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reconnect Facebook",
-        "tags": ["API Account Facebook (Gold+)"]
+        "tags": [
+          "API Account Facebook (Gold+)"
+        ]
       }
     },
     "/public/account/instagram/authorize": {
@@ -3642,7 +4236,10 @@
             "name": "redirect",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3657,9 +4254,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Authorize Instagram",
-        "tags": ["API Account Instagram (Gold+)"]
+        "tags": [
+          "API Account Instagram (Gold+)"
+        ]
       }
     },
     "/public/account/instagram/connect": {
@@ -3682,14 +4285,22 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "accountId": "69e97477a795504e0786cec6" }
+                "example": {
+                  "accountId": "69e97477a795504e0786cec6"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Connect Instagram",
-        "tags": ["API Account Instagram (Gold+)"]
+        "tags": [
+          "API Account Instagram (Gold+)"
+        ]
       }
     },
     "/public/account/instagram/connect/{accountId}": {
@@ -3718,7 +4329,9 @@
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "400": {
             "description": "",
             "content": {
@@ -3734,14 +4347,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reconnect Instagram",
-        "tags": ["API Account Instagram (Gold+)"]
+        "tags": [
+          "API Account Instagram (Gold+)"
+        ]
       }
     },
     "/public/account/threads/authorize": {
@@ -3753,7 +4375,10 @@
             "name": "redirect",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3768,9 +4393,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Authorize Threads",
-        "tags": ["API Account Threads (Gold+)"]
+        "tags": [
+          "API Account Threads (Gold+)"
+        ]
       }
     },
     "/public/account/threads/connect": {
@@ -3782,7 +4413,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyConnectThreadsDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyConnectThreadsDTO"
+              }
             }
           }
         },
@@ -3791,14 +4424,22 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "accountId": "69e97477a795504e0786cec6" }
+                "example": {
+                  "accountId": "69e97477a795504e0786cec6"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Connect Threads",
-        "tags": ["API Account Threads (Gold+)"]
+        "tags": [
+          "API Account Threads (Gold+)"
+        ]
       }
     },
     "/public/account/threads/connect/{accountId}": {
@@ -3820,12 +4461,16 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyConnectThreadsDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyConnectThreadsDTO"
+              }
             }
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "400": {
             "description": "",
             "content": {
@@ -3841,14 +4486,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reconnect Threads",
-        "tags": ["API Account Threads (Gold+)"]
+        "tags": [
+          "API Account Threads (Gold+)"
+        ]
       }
     },
     "/public/account/youtube/authorize": {
@@ -3860,7 +4514,10 @@
             "name": "redirect",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -3875,9 +4532,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Authorize YouTube",
-        "tags": ["API Account YouTube (Gold+)"]
+        "tags": [
+          "API Account YouTube (Gold+)"
+        ]
       }
     },
     "/public/account/youtube/channel": {
@@ -3915,9 +4578,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Channel YouTube",
-        "tags": ["API Account YouTube (Gold+)"]
+        "tags": [
+          "API Account YouTube (Gold+)"
+        ]
       }
     },
     "/public/account/youtube/exchange": {
@@ -3947,9 +4616,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Exchange YouTube",
-        "tags": ["API Account YouTube (Gold+)"]
+        "tags": [
+          "API Account YouTube (Gold+)"
+        ]
       }
     },
     "/public/account/youtube/connect": {
@@ -3972,14 +4647,22 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "accountId": "69e97477a795504e0786cec6" }
+                "example": {
+                  "accountId": "69e97477a795504e0786cec6"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Connect YouTube",
-        "tags": ["API Account YouTube (Gold+)"]
+        "tags": [
+          "API Account YouTube (Gold+)"
+        ]
       }
     },
     "/public/account/youtube/connect/{accountId}": {
@@ -4008,7 +4691,9 @@
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "400": {
             "description": "",
             "content": {
@@ -4024,14 +4709,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reconnect YouTube",
-        "tags": ["API Account YouTube (Gold+)"]
+        "tags": [
+          "API Account YouTube (Gold+)"
+        ]
       }
     },
     "/public/account/linkedin/authorize": {
@@ -4043,7 +4737,10 @@
             "name": "redirect",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -4058,9 +4755,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Authorize LinkedIn",
-        "tags": ["API Account LinkedIn (Gold+)"]
+        "tags": [
+          "API Account LinkedIn (Gold+)"
+        ]
       }
     },
     "/public/account/linkedin/organization": {
@@ -4098,9 +4801,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Get Organization LinkedIn",
-        "tags": ["API Account LinkedIn (Gold+)"]
+        "tags": [
+          "API Account LinkedIn (Gold+)"
+        ]
       }
     },
     "/public/account/linkedin/exchange": {
@@ -4130,9 +4839,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Exchange LinkedIn",
-        "tags": ["API Account LinkedIn (Gold+)"]
+        "tags": [
+          "API Account LinkedIn (Gold+)"
+        ]
       }
     },
     "/public/account/linkedin/connect": {
@@ -4155,14 +4870,22 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "accountId": "69e97477a795504e0786cec6" }
+                "example": {
+                  "accountId": "69e97477a795504e0786cec6"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Connect LinkedIn",
-        "tags": ["API Account LinkedIn (Gold+)"]
+        "tags": [
+          "API Account LinkedIn (Gold+)"
+        ]
       }
     },
     "/public/account/linkedin/connect/{accountId}": {
@@ -4191,7 +4914,9 @@
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "400": {
             "description": "",
             "content": {
@@ -4207,14 +4932,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reconnect LinkedIn",
-        "tags": ["API Account LinkedIn (Gold+)"]
+        "tags": [
+          "API Account LinkedIn (Gold+)"
+        ]
       }
     },
     "/public/account/tiktok/authorize": {
@@ -4226,7 +4960,10 @@
             "name": "redirect",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -4241,9 +4978,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Authorize TikTok",
-        "tags": ["API Account TikTok (Gold+)"]
+        "tags": [
+          "API Account TikTok (Gold+)"
+        ]
       }
     },
     "/public/account/tiktok/connect": {
@@ -4255,7 +4998,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyConnectTikTokDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyConnectTikTokDTO"
+              }
             }
           }
         },
@@ -4264,14 +5009,22 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "accountId": "69e97477a795504e0786cec6" }
+                "example": {
+                  "accountId": "69e97477a795504e0786cec6"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Connect TikTok",
-        "tags": ["API Account TikTok (Gold+)"]
+        "tags": [
+          "API Account TikTok (Gold+)"
+        ]
       }
     },
     "/public/account/tiktok/connect/{accountId}": {
@@ -4293,12 +5046,16 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyConnectTikTokDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyConnectTikTokDTO"
+              }
             }
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "400": {
             "description": "",
             "content": {
@@ -4314,14 +5071,23 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reconnect TikTok",
-        "tags": ["API Account TikTok (Gold+)"]
+        "tags": [
+          "API Account TikTok (Gold+)"
+        ]
       }
     },
     "/public/account/shopee/authorize": {
@@ -4333,7 +5099,10 @@
             "name": "redirect",
             "required": true,
             "in": "query",
-            "schema": { "example": "https://repliz.com", "type": "string" }
+            "schema": {
+              "example": "https://repliz.com",
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -4348,9 +5117,15 @@
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Authorize Shopee",
-        "tags": ["API Account Shopee (Gold+)"]
+        "tags": [
+          "API Account Shopee (Gold+)"
+        ]
       }
     },
     "/public/account/shopee/connect": {
@@ -4362,7 +5137,9 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyConnectShopeeDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyConnectShopeeDTO"
+              }
             }
           }
         },
@@ -4371,14 +5148,22 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "accountId": "69e97477a795504e0786cec6" }
+                "example": {
+                  "accountId": "69e97477a795504e0786cec6"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Connect Shopee",
-        "tags": ["API Account Shopee (Gold+)"]
+        "tags": [
+          "API Account Shopee (Gold+)"
+        ]
       }
     },
     "/public/account/shopee/connect/{accountId}": {
@@ -4400,12 +5185,16 @@
           "required": true,
           "content": {
             "application/json": {
-              "schema": { "$ref": "#/components/schemas/BodyConnectShopeeDTO" }
+              "schema": {
+                "$ref": "#/components/schemas/BodyConnectShopeeDTO"
+              }
             }
           }
         },
         "responses": {
-          "204": { "description": "" },
+          "204": {
+            "description": ""
+          },
           "400": {
             "description": "",
             "content": {
@@ -4421,14 +5210,385 @@
             "description": "",
             "content": {
               "application/json": {
-                "example": { "code": 404, "message": "account not found" }
+                "example": {
+                  "code": 404,
+                  "message": "account not found"
+                }
               }
             }
           }
         },
-        "security": [{ "basic": [] }],
+        "security": [
+          {
+            "basic": []
+          }
+        ],
         "summary": "API Reconnect Shopee",
-        "tags": ["API Account Shopee (Gold+)"]
+        "tags": [
+          "API Account Shopee (Gold+)"
+        ]
+      }
+    },
+    "/public/storage/statistic": {
+      "get": {
+        "description": "\nRetrieve storage usage statistics.\n\nThis endpoint is used to get information about the current storage usage, including the total number of files, used storage space, and remaining available capacity.\n\nResponse:\n- Returns storage usage statistics\n- Includes information such as total files, used storage, and storage limit\n",
+        "operationId": "StorageController_getStatistic",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "file": {
+                    "total": 1,
+                    "success": 1,
+                    "pending": 0
+                  },
+                  "usage": {
+                    "total": 5368709120,
+                    "free": 5367653384,
+                    "used": 1055736
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "API Get Statistic Storage",
+        "tags": [
+          "API Storage (Storage+)"
+        ]
+      }
+    },
+    "/public/storage/file": {
+      "get": {
+        "description": "\nRetrieve a list of uploaded files.\n\nThis endpoint is used to fetch files stored in your storage.\nIt supports pagination and optional search by filename.\n\nParameters:\n- page (number) — The page number to retrieve\n- limit (number) — Number of files per page\n- search (string, optional) — Search files by filename\n\nResponse:\n- Returns an array of file objects\n- Each file includes id, filename, size, mimetype, and upload information\n",
+        "operationId": "StorageController_getFile",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "example": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "example": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "hello",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "docs": [
+                    {
+                      "_id": "6a4c3b580afd72bb342c3885",
+                      "filename": "filename.mp4",
+                      "mimetype": "video/mp4",
+                      "size": 1055736,
+                      "key": "uploads/6879b98097fc8c8a78d1d4c1/d69f8f58-48e6-4b58-bfbb-97dc6e5e16b4.mp4",
+                      "url": "https://storage.repliz.com/uploads/6879b98097fc8c8a78d1d4c1/d69f8f58-48e6-4b58-bfbb-97dc6e5e16b4.mp4",
+                      "status": "success",
+                      "userId": "6879b98097fc8c8a78d1d4c1",
+                      "createdAt": "2026-07-06T23:33:44.019Z",
+                      "updatedAt": "2026-07-06T23:38:37.176Z",
+                      "__v": 0,
+                      "id": "6a4c3b580afd72bb342c3885"
+                    },
+                    {
+                      "_id": "6a4c3a3bc4586b1f1ce483e4",
+                      "filename": "filename.mp4",
+                      "mimetype": "video/mp4",
+                      "size": 102400,
+                      "key": "uploads/6879b98097fc8c8a78d1d4c1/0dcb2544-bbc8-4b42-a2e3-0449133ef58f.mp4",
+                      "url": "https://storage.repliz.com/uploads/6879b98097fc8c8a78d1d4c1/0dcb2544-bbc8-4b42-a2e3-0449133ef58f.mp4",
+                      "status": "pending",
+                      "userId": "6879b98097fc8c8a78d1d4c1",
+                      "createdAt": "2026-07-06T23:28:59.836Z",
+                      "updatedAt": "2026-07-06T23:28:59.836Z",
+                      "__v": 0,
+                      "id": "6a4c3a3bc4586b1f1ce483e4"
+                    }
+                  ],
+                  "totalDocs": 2,
+                  "limit": 20,
+                  "totalPages": 1,
+                  "page": 1,
+                  "pagingCounter": 1,
+                  "hasPrevPage": false,
+                  "hasNextPage": false,
+                  "prevPage": null,
+                  "nextPage": null
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "API Get File Storage",
+        "tags": [
+          "API Storage (Storage+)"
+        ]
+      }
+    },
+    "/public/storage/file/{fileId}": {
+      "get": {
+        "description": "\nRetrieve detailed information of a specific file.\n\nThis endpoint is used to fetch complete information about a stored file.\n\nParameters:\n- fileId (string) — The unique identifier of the file\n\nResponse:\n- Returns a single file object with detailed metadata\n",
+        "operationId": "StorageController_getOneFile",
+        "parameters": [
+          {
+            "name": "fileId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "example": "680affa5ce12f2f72916f67e",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "_id": "6a4c3a3bc4586b1f1ce483e4",
+                  "filename": "filename.mp4",
+                  "mimetype": "video/mp4",
+                  "size": 102400,
+                  "key": "uploads/6879b98097fc8c8a78d1d4c1/0dcb2544-bbc8-4b42-a2e3-0449133ef58f.mp4",
+                  "url": "https://storage.repliz.com/uploads/6879b98097fc8c8a78d1d4c1/0dcb2544-bbc8-4b42-a2e3-0449133ef58f.mp4",
+                  "status": "pending",
+                  "userId": "6879b98097fc8c8a78d1d4c1",
+                  "createdAt": "2026-07-06T23:28:59.836Z",
+                  "updatedAt": "2026-07-06T23:28:59.836Z",
+                  "__v": 0,
+                  "id": "6a4c3a3bc4586b1f1ce483e4"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 404,
+                  "message": "file not found"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "API Get One File Storage",
+        "tags": [
+          "API Storage (Storage+)"
+        ]
+      },
+      "delete": {
+        "description": "\nDelete a stored file.\n\nThis endpoint is used to permanently remove a file from storage.\n\nParameters:\n- fileId (string) — The unique identifier of the file\n\nResponse:\n- No content is returned on success (204 No Content)\n",
+        "operationId": "StorageController_removeFile",
+        "parameters": [
+          {
+            "name": "fileId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "example": "680affa5ce12f2f72916f67e",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 404,
+                  "message": "file not found"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "API Remove File Storage",
+        "tags": [
+          "API Storage (Storage+)"
+        ]
+      }
+    },
+    "/public/storage/file/init": {
+      "post": {
+        "description": "\nInitialize a file upload.\n\nThis endpoint is used before uploading a file to storage.\nProvide the filename, file size, and MIME type to create an upload session.\n\nBody:\n- filename (string) — Name of the file\n- size (number) — File size in bytes\n- mimetype (string) — MIME type of the file\n\nResponse:\n- Returns upload session information\n- Includes the file identifier and upload URL required to upload the file\n",
+        "operationId": "StorageController_initFile",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BodyInitFileDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id": "6a4c3a3bc4586b1f1ce483e4",
+                  "upload": "https://repliz.2ca853e78c4cd1a89797e3d770c7ca9f.r2.cloudflarestorage.com/uploads/6879b98097fc8c8a78d1d4c1/0dcb2544-bbc8-4b42-a2e3-0449133ef58f.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=58039744a2190ee9aa84ad91e5c410f9%2F20260706%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260706T232859Z&X-Amz-Expires=600&X-Amz-Signature=866b35ae426e15da69f7335918382eebe8c90b3ea7895d66508307c0ac2120f7&X-Amz-SignedHeaders=host&x-amz-checksum-crc32=AAAAAA%3D%3D&x-amz-sdk-checksum-algorithm=CRC32&x-id=PutObject",
+                  "key": "uploads/6879b98097fc8c8a78d1d4c1/0dcb2544-bbc8-4b42-a2e3-0449133ef58f.mp4",
+                  "url": "https://storage.repliz.com/uploads/6879b98097fc8c8a78d1d4c1/0dcb2544-bbc8-4b42-a2e3-0449133ef58f.mp4"
+                }
+              }
+            }
+          },
+          "402": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 402,
+                  "message": "upgrade to get more storage"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "API Init File Storage",
+        "tags": [
+          "API Storage (Storage+)"
+        ]
+      }
+    },
+    "/public/storage/file/{fileId}/complete": {
+      "post": {
+        "description": "\nComplete a file upload.\n\nThis endpoint is used after the file has been successfully uploaded to storage.\nIt finalizes the upload process and makes the file available for use.\n\nParameters:\n- fileId (string) — The unique identifier of the uploaded file\n\nResponse:\n- No content is returned on success (204 No Content)\n",
+        "operationId": "StorageController_completeFile",
+        "parameters": [
+          {
+            "name": "fileId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "example": "680affa5ce12f2f72916f67e",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "402": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "example": {
+                  "code": 402,
+                  "message": "upgrade to get more storage"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "API Complete File Storage",
+        "tags": [
+          "API Storage (Storage+)"
+        ]
+      }
+    },
+    "/public/storage/file/mass": {
+      "delete": {
+        "description": "\nDelete multiple files.\n\nThis endpoint is used to remove multiple files at once so they will not be executed.\n\nParameters:\n- fileIds (string[]) — Array of file identifiers to be removed\n\nResponse:\n- No content is returned on success (204 No Content)\n",
+        "operationId": "StorageController_removeFiles",
+        "parameters": [
+          {
+            "name": "fileIds",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "example": [
+                "680affa5ce12f2f72916f67e",
+                "680affa5ce12f2f72916f67a"
+              ],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ],
+        "summary": "API Remove Files Storage",
+        "tags": [
+          "API Storage (Storage+)"
+        ]
       }
     }
   },
@@ -4445,14 +5605,24 @@
   "tags": [],
   "servers": [],
   "components": {
-    "securitySchemes": { "basic": { "type": "http", "scheme": "basic" } },
+    "securitySchemes": {
+      "basic": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
     "schemas": {
       "BodyReplyCommentDTO": {
         "type": "object",
         "properties": {
-          "text": { "type": "string", "example": "Reply from Repliz" }
+          "text": {
+            "type": "string",
+            "example": "Reply from Repliz"
+          }
         },
-        "required": ["text"]
+        "required": [
+          "text"
+        ]
       },
       "BodyUpdateStatusCommentDTO": {
         "type": "object",
@@ -4460,17 +5630,36 @@
           "status": {
             "type": "string",
             "example": "pending",
-            "enum": ["pending", "resolved", "ignored"]
+            "enum": [
+              "pending",
+              "resolved",
+              "ignored"
+            ]
           }
         },
-        "required": ["status"]
+        "required": [
+          "status"
+        ]
       },
       "ScheduleMedia": {
         "type": "object",
         "properties": {
-          "alt": { "type": "string", "example": "image of cat" },
-          "customThumbnail": { "type": "boolean", "example": false },
-          "type": { "type": "number", "example": "image", "enum": [0, 1] },
+          "alt": {
+            "type": "string",
+            "example": "image of cat"
+          },
+          "customThumbnail": {
+            "type": "boolean",
+            "example": false
+          },
+          "type": {
+            "type": "number",
+            "example": "image",
+            "enum": [
+              0,
+              1
+            ]
+          },
           "thumbnail": {
             "type": "string",
             "example": "https://storage.repliz.com/thumbnail.jpg"
@@ -4480,7 +5669,10 @@
             "example": "https://storage.repliz.com/video.mp4"
           }
         },
-        "required": ["type", "url"]
+        "required": [
+          "type",
+          "url"
+        ]
       },
       "ScheduleMeta": {
         "type": "object",
@@ -4493,15 +5685,28 @@
             "type": "string",
             "example": "Repliz helps you manage comments from YouTube, Facebook, Instagram, Threads, TikTok and LinkedIn – all in one app. Automate replies, filter spam, and save time."
           },
-          "url": { "type": "string", "example": "https://repliz.com" }
+          "url": {
+            "type": "string",
+            "example": "https://repliz.com"
+          }
         },
-        "required": ["title", "description", "url"]
+        "required": [
+          "title",
+          "description",
+          "url"
+        ]
       },
       "ScheduleAdditionalInfoMusic": {
         "type": "object",
         "properties": {
-          "id": { "type": "string", "example": "7569541912459692049" },
-          "artist": { "type": "string", "example": "Valent Duga" },
+          "id": {
+            "type": "string",
+            "example": "7569541912459692049"
+          },
+          "artist": {
+            "type": "string",
+            "example": "Valent Duga"
+          },
           "name": {
             "type": "string",
             "example": "Untukmu yang masih bertahan"
@@ -4511,35 +5716,71 @@
             "example": "https://p16-sg.tiktokcdn.com/aweme/100x100/tos-alisg-v-2774/ocTKEQKXXDCpsoAcArF9BZpABtfgwBEQEVfxCE.jpeg"
           }
         },
-        "required": ["id", "artist", "name", "thumbnail"]
+        "required": [
+          "id",
+          "artist",
+          "name",
+          "thumbnail"
+        ]
       },
       "ScheduleAdditionalProduct": {
         "type": "object",
         "properties": {
-          "id": { "type": "string", "example": "50060886180" },
-          "name": { "type": "string", "example": "Apply Meta" },
+          "id": {
+            "type": "string",
+            "example": "50060886180"
+          },
+          "name": {
+            "type": "string",
+            "example": "Apply Meta"
+          },
           "thumbnail": {
             "type": "string",
             "example": "https://cf.shopee.co.id/file/id-11134207-822wh-moho65xqkn4ca1"
           },
-          "currency": { "type": "string", "example": "IDR" },
-          "price": { "type": "number", "example": 100000 }
+          "currency": {
+            "type": "string",
+            "example": "IDR"
+          },
+          "price": {
+            "type": "number",
+            "example": 100000
+          }
         },
-        "required": ["id", "name", "thumbnail", "currency", "price"]
+        "required": [
+          "id",
+          "name",
+          "thumbnail",
+          "currency",
+          "price"
+        ]
       },
       "ScheduleAdditionalInfo": {
         "type": "object",
         "properties": {
-          "isAiGenerated": { "type": "boolean", "example": false },
-          "isDraft": { "type": "boolean", "example": false },
+          "isAiGenerated": {
+            "type": "boolean",
+            "example": false
+          },
+          "isDraft": {
+            "type": "boolean",
+            "example": false
+          },
           "collaborators": {
-            "example": ["replizofficial", "azickri.ai"],
+            "example": [
+              "replizofficial",
+              "azickri.ai"
+            ],
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "music": {
             "allOf": [
-              { "$ref": "#/components/schemas/ScheduleAdditionalInfoMusic" }
+              {
+                "$ref": "#/components/schemas/ScheduleAdditionalInfoMusic"
+              }
             ]
           },
           "products": {
@@ -4556,14 +5797,34 @@
               "stardenburdenhardenbart"
             ],
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
           "mentions": {
-            "example": ["replizofficial", "azickri.ai"],
+            "example": [
+              "replizofficial",
+              "azickri.ai"
+            ],
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
-          "link": { "type": "string", "example": "https://repliz.com" }
+          "link": {
+            "type": "string",
+            "example": "https://repliz.com"
+          },
+          "targetCountries": {
+            "example": [
+              "ID",
+              "EN"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
         },
         "required": [
           "isAiGenerated",
@@ -4573,55 +5834,98 @@
           "products",
           "tags",
           "mentions",
-          "link"
+          "link",
+          "targetCountries"
         ]
       },
       "ScheduleReply": {
         "type": "object",
         "properties": {
-          "title": { "type": "string", "example": "Title of Content" },
+          "title": {
+            "type": "string",
+            "example": "Title of Content"
+          },
           "description": {
             "type": "string",
             "example": "Description/Caption of Content"
           },
-          "topic": { "type": "string", "example": "Content AI" },
+          "topic": {
+            "type": "string",
+            "example": "Content AI"
+          },
           "type": {
             "type": "string",
             "example": "text",
-            "enum": ["text", "image", "video", "reel", "album", "link", "story"]
+            "enum": [
+              "text",
+              "image",
+              "video",
+              "reel",
+              "album",
+              "link",
+              "story"
+            ]
           },
           "medias": {
             "type": "array",
-            "items": { "$ref": "#/components/schemas/ScheduleMedia" }
+            "items": {
+              "$ref": "#/components/schemas/ScheduleMedia"
+            }
           }
         },
-        "required": ["title", "description", "topic", "type", "medias"]
+        "required": [
+          "title",
+          "description",
+          "topic",
+          "type",
+          "medias"
+        ]
       },
       "BodyCreateSchedulePublicDTO": {
         "type": "object",
         "properties": {
-          "title": { "type": "string", "example": "Title of Content" },
+          "title": {
+            "type": "string",
+            "example": "Title of Content"
+          },
           "description": {
             "type": "string",
             "example": "Description/Caption of Content"
           },
-          "topic": { "type": "string", "example": "Content AI" },
+          "topic": {
+            "type": "string",
+            "example": "Content AI"
+          },
           "type": {
             "type": "string",
             "example": "text",
-            "enum": ["text", "image", "video", "reel", "album", "link", "story"]
+            "enum": [
+              "text",
+              "image",
+              "video",
+              "reel",
+              "album",
+              "link",
+              "story"
+            ]
           },
           "medias": {
             "type": "array",
-            "items": { "$ref": "#/components/schemas/ScheduleMedia" }
+            "items": {
+              "$ref": "#/components/schemas/ScheduleMedia"
+            }
           },
-          "meta": { "$ref": "#/components/schemas/ScheduleMeta" },
+          "meta": {
+            "$ref": "#/components/schemas/ScheduleMeta"
+          },
           "additionalInfo": {
             "$ref": "#/components/schemas/ScheduleAdditionalInfo"
           },
           "replies": {
             "type": "array",
-            "items": { "$ref": "#/components/schemas/ScheduleReply" }
+            "items": {
+              "$ref": "#/components/schemas/ScheduleReply"
+            }
           },
           "accountId": {
             "type": "string",
@@ -4630,7 +5934,7 @@
           "scheduleAt": {
             "format": "date-time",
             "type": "string",
-            "example": "2026-06-13T01:00:57.381Z"
+            "example": "2026-07-08T00:40:45.257Z"
           },
           "templateId": {
             "type": "string",
@@ -4653,33 +5957,53 @@
       "BodyUpdateSchedulePublicDTO": {
         "type": "object",
         "properties": {
-          "title": { "type": "string", "example": "Title of Content" },
+          "title": {
+            "type": "string",
+            "example": "Title of Content"
+          },
           "description": {
             "type": "string",
             "example": "Description/Caption of Content"
           },
-          "topic": { "type": "string", "example": "Content AI" },
+          "topic": {
+            "type": "string",
+            "example": "Content AI"
+          },
           "type": {
             "type": "string",
             "example": "text",
-            "enum": ["text", "image", "video", "reel", "album", "link", "story"]
+            "enum": [
+              "text",
+              "image",
+              "video",
+              "reel",
+              "album",
+              "link",
+              "story"
+            ]
           },
           "medias": {
             "type": "array",
-            "items": { "$ref": "#/components/schemas/ScheduleMedia" }
+            "items": {
+              "$ref": "#/components/schemas/ScheduleMedia"
+            }
           },
-          "meta": { "$ref": "#/components/schemas/ScheduleMeta" },
+          "meta": {
+            "$ref": "#/components/schemas/ScheduleMeta"
+          },
           "additionalInfo": {
             "$ref": "#/components/schemas/ScheduleAdditionalInfo"
           },
           "replies": {
             "type": "array",
-            "items": { "$ref": "#/components/schemas/ScheduleReply" }
+            "items": {
+              "$ref": "#/components/schemas/ScheduleReply"
+            }
           },
           "scheduleAt": {
             "format": "date-time",
             "type": "string",
-            "example": "2026-06-13T01:00:57.383Z"
+            "example": "2026-07-08T00:40:45.259Z"
           },
           "templateId": {
             "type": "string",
@@ -4709,9 +6033,15 @@
             "type": "string",
             "example": "https://storage.repliz.com/thumbnail.png"
           },
-          "mimetype": { "type": "string", "example": "image/jpeg" }
+          "mimetype": {
+            "type": "string",
+            "example": "image/jpeg"
+          }
         },
-        "required": ["url", "mimetype"]
+        "required": [
+          "url",
+          "mimetype"
+        ]
       },
       "ObjectVideo": {
         "type": "object",
@@ -4724,10 +6054,20 @@
             "type": "string",
             "example": "https://storage.repliz.com/thumbnail.png"
           },
-          "duration": { "type": "number", "example": 10 },
-          "mimetype": { "type": "string", "example": "video/mp4" }
+          "duration": {
+            "type": "number",
+            "example": 10
+          },
+          "mimetype": {
+            "type": "string",
+            "example": "video/mp4"
+          }
         },
-        "required": ["url", "duration", "mimetype"]
+        "required": [
+          "url",
+          "duration",
+          "mimetype"
+        ]
       },
       "ObjectAudio": {
         "type": "object",
@@ -4736,10 +6076,20 @@
             "type": "string",
             "example": "https://storage.repliz.com/audio.mp3"
           },
-          "duration": { "type": "number", "example": 10 },
-          "mimetype": { "type": "string", "example": "audio/mp3" }
+          "duration": {
+            "type": "number",
+            "example": 10
+          },
+          "mimetype": {
+            "type": "string",
+            "example": "audio/mp3"
+          }
         },
-        "required": ["url", "duration", "mimetype"]
+        "required": [
+          "url",
+          "duration",
+          "mimetype"
+        ]
       },
       "ObjectDocument": {
         "type": "object",
@@ -4748,11 +6098,25 @@
             "type": "string",
             "example": "https://storage.repliz.com/file.pdf"
           },
-          "name": { "type": "string", "example": "file.pdf" },
-          "size": { "type": "number", "example": 5242880 },
-          "mimetype": { "type": "string", "example": "application/pdf" }
+          "name": {
+            "type": "string",
+            "example": "file.pdf"
+          },
+          "size": {
+            "type": "number",
+            "example": 5242880
+          },
+          "mimetype": {
+            "type": "string",
+            "example": "application/pdf"
+          }
         },
-        "required": ["url", "name", "size", "mimetype"]
+        "required": [
+          "url",
+          "name",
+          "size",
+          "mimetype"
+        ]
       },
       "Button": {
         "type": "object",
@@ -4760,24 +6124,44 @@
           "type": {
             "type": "string",
             "example": "web_url",
-            "enum": ["web_url"]
+            "enum": [
+              "web_url"
+            ]
           },
-          "title": { "type": "string", "example": "Hello there" },
-          "url": { "type": "string", "example": "https://repliz.com" }
+          "title": {
+            "type": "string",
+            "example": "Hello there"
+          },
+          "url": {
+            "type": "string",
+            "example": "https://repliz.com"
+          }
         },
-        "required": ["type", "title", "url"]
+        "required": [
+          "type",
+          "title",
+          "url"
+        ]
       },
       "ObjectButton": {
         "type": "object",
         "properties": {
-          "text": { "type": "string", "example": "Hello there" },
+          "text": {
+            "type": "string",
+            "example": "Hello there"
+          },
           "image": {
             "type": "string",
             "example": "https://storage.repliz.com/image.png"
           },
-          "buttons": { "$ref": "#/components/schemas/Button" }
+          "buttons": {
+            "$ref": "#/components/schemas/Button"
+          }
         },
-        "required": ["text", "buttons"]
+        "required": [
+          "text",
+          "buttons"
+        ]
       },
       "BodySendMessageDTO": {
         "type": "object",
@@ -4785,16 +6169,38 @@
           "type": {
             "type": "string",
             "example": "text",
-            "enum": ["text", "image", "video", "audio", "document", "button"]
+            "enum": [
+              "text",
+              "image",
+              "video",
+              "audio",
+              "document",
+              "button"
+            ]
           },
-          "text": { "type": "string", "example": "Hello" },
-          "image": { "$ref": "#/components/schemas/ObjectImage" },
-          "video": { "$ref": "#/components/schemas/ObjectVideo" },
-          "audio": { "$ref": "#/components/schemas/ObjectAudio" },
-          "document": { "$ref": "#/components/schemas/ObjectDocument" },
-          "button": { "$ref": "#/components/schemas/ObjectButton" }
+          "text": {
+            "type": "string",
+            "example": "Hello"
+          },
+          "image": {
+            "$ref": "#/components/schemas/ObjectImage"
+          },
+          "video": {
+            "$ref": "#/components/schemas/ObjectVideo"
+          },
+          "audio": {
+            "$ref": "#/components/schemas/ObjectAudio"
+          },
+          "document": {
+            "$ref": "#/components/schemas/ObjectDocument"
+          },
+          "button": {
+            "$ref": "#/components/schemas/ObjectButton"
+          }
         },
-        "required": ["type"]
+        "required": [
+          "type"
+        ]
       },
       "BodyCreateCommentDTO": {
         "type": "object",
@@ -4807,9 +6213,15 @@
             "type": "string",
             "example": "Hello there, this is comment from Repliz"
           },
-          "commentId": { "type": "string", "example": "18083576267346315" }
+          "commentId": {
+            "type": "string",
+            "example": "18083576267346315"
+          }
         },
-        "required": ["accountId", "text"]
+        "required": [
+          "accountId",
+          "text"
+        ]
       },
       "BodyMessageCommentDTO": {
         "type": "object",
@@ -4818,14 +6230,22 @@
             "type": "string",
             "example": "680affa5ce12f2f72916f67e"
           },
-          "commentId": { "type": "string", "example": "18083576267346315" },
+          "commentId": {
+            "type": "string",
+            "example": "18083576267346315"
+          },
           "text": {
             "type": "string",
             "example": "Hello there, this is comment from Repliz"
           },
-          "button": { "$ref": "#/components/schemas/ObjectButton" }
+          "button": {
+            "$ref": "#/components/schemas/ObjectButton"
+          }
         },
-        "required": ["accountId", "commentId"]
+        "required": [
+          "accountId",
+          "commentId"
+        ]
       },
       "BodyExchangeAccountFacebookDTO": {
         "type": "object",
@@ -4835,18 +6255,26 @@
             "example": "9402c20336a7c3ce2d8e4f763fd598ad7e09116ba611eeb4b429b31cce3dda1147e02582211155149b1024fd4995b352d3cc3a975dd18aca8d15b7c0d4531f340688f60649fa6ad053d2ca5b9de3df1cfae47261a16e3680416d82f85b025bdfc41154bdcbb5c01874499b76364ca959ecb5abb4cea1b798e947a6ecf6a471093d7ea7d9a40718f2fed191b2ced80405b6bbfa64bce0d577707be9286a980b9f0a8e0a335e6b1ab0559a2b9be13c2101ade91ab964e7a483edcb4834f2d60021b276f37f678407794a72ae0fc95c835006cc5d6c4f874072db08c786417f977760727edf006016e8b655533382675406"
           }
         },
-        "required": ["code"]
+        "required": [
+          "code"
+        ]
       },
       "BodyConnectAccountFacebookDTO": {
         "type": "object",
         "properties": {
-          "pageId": { "type": "string", "example": "954196197769764" },
+          "pageId": {
+            "type": "string",
+            "example": "954196197769764"
+          },
           "token": {
             "type": "string",
             "example": "9402c20336a7c3ce2d8e4f763fd598ad7e09116ba611eeb4b429b31cce3dda1147e02582211155149b1024fd4995b352d3cc3a975dd18aca8d15b7c0d4531f340688f60649fa6ad053d2ca5b9de3df1cfae47261a16e3680416d82f85b025bdfc41154bdcbb5c01874499b76364ca959ecb5abb4cea1b798e947a6ecf6a471093d7ea7d9a40718f2fed191b2ced80405b6bbfa64bce0d577707be9286a980b9f0a8e0a335e6b1ab0559a2b9be13c2101ade91ab964e7a483edcb4834f2d60021b276f37f678407794a72ae0fc95c835006cc5d6c4f874072db08c786417f977760727edf006016e8b655533382675406.2255a73f-8431-4458-abcf-ee7f867952db"
           }
         },
-        "required": ["pageId", "token"]
+        "required": [
+          "pageId",
+          "token"
+        ]
       },
       "BodyConnectInstagramDTO": {
         "type": "object",
@@ -4856,7 +6284,9 @@
             "example": "9402c20336a7c3ce2d8e4f763fd598ad7e09116ba611eeb4b429b31cce3dda1147e02582211155149b1024fd4995b352d3cc3a975dd18aca8d15b7c0d4531f340688f60649fa6ad053d2ca5b9de3df1cfae47261a16e3680416d82f85b025bdfc41154bdcbb5c01874499b76364ca959ecb5abb4cea1b798e947a6ecf6a471093d7ea7d9a40718f2fed191b2ced80405b6bbfa64bce0d577707be9286a980b9f0a8e0a335e6b1ab0559a2b9be13c2101ade91ab964e7a483edcb4834f2d60021b276f37f678407794a72ae0fc95c835006cc5d6c4f874072db08c786417f977760727edf006016e8b655533382675406"
           }
         },
-        "required": ["code"]
+        "required": [
+          "code"
+        ]
       },
       "BodyConnectThreadsDTO": {
         "type": "object",
@@ -4866,7 +6296,9 @@
             "example": "9402c20336a7c3ce2d8e4f763fd598ad7e09116ba611eeb4b429b31cce3dda1147e02582211155149b1024fd4995b352d3cc3a975dd18aca8d15b7c0d4531f340688f60649fa6ad053d2ca5b9de3df1cfae47261a16e3680416d82f85b025bdfc41154bdcbb5c01874499b76364ca959ecb5abb4cea1b798e947a6ecf6a471093d7ea7d9a40718f2fed191b2ced80405b6bbfa64bce0d577707be9286a980b9f0a8e0a335e6b1ab0559a2b9be13c2101ade91ab964e7a483edcb4834f2d60021b276f37f678407794a72ae0fc95c835006cc5d6c4f874072db08c786417f977760727edf006016e8b655533382675406"
           }
         },
-        "required": ["code"]
+        "required": [
+          "code"
+        ]
       },
       "BodyExchangeAccountYouTubeDTO": {
         "type": "object",
@@ -4876,7 +6308,9 @@
             "example": "8b79cc34202ffd82199faf11b2bc917e24263f99be63415d53f658d017fd9125d73ec016d5e833e395e4f361bfab11b71690a2d05312bdc542df1bef4cac181ad8b55eda84804d82eb38a5d921b79223687ff4a4e2f37240451d9a0d7ddc0368"
           }
         },
-        "required": ["code"]
+        "required": [
+          "code"
+        ]
       },
       "BodyConnectAccountYouTubeDTO": {
         "type": "object",
@@ -4890,7 +6324,10 @@
             "example": "ddf88b1e4f60b62e7ab9101e6cb4df5be84f228e571bfd9a970ef03f09436bd8f3a388e8d3beebecae68225c76e2b2bc7538de3d8c529063283542d2e6bf9c0dd05bae57b1c97a987a958eb868d978756eb3ae6cb7868a9eed5f54c0f604b6ce17237adf7026558dda01e858a508aca7f809e1ceba1934982b9ae8bbbb49b868d5d40f85e6827c7f064497d81ab84ec4328b2159bf471d1c3f62206eb1a8a3442f598d381d43c2d10a5bb3ba81ced459d91e363b5133b7d26401f579cc4fb7c2fa0f862035066518b71f02ac6f8fa8893dc4eb0435a34049a908a2b293c0889fa8935b010a613efa00b081fcc11e50712863282fa547b211191a7735123fefee10bf85c739ad4088171a13240badd03594ea49f78c1cff015e63128eb27501baf543a64b29361a31ed68c2f74443166771cced518749055f83c1968572d9f881c5287cc6700bc2cd866ac5ecc7352b83a2a4317a25e58d1e6e6b6522d27f909b18a6febcbb9715b6978410eafdd81999a5c5b11cf0a451a311720bc401ed82eb.3b5091e8-fe55-4f1c-a729-86d80c152381"
           }
         },
-        "required": ["channelId", "token"]
+        "required": [
+          "channelId",
+          "token"
+        ]
       },
       "BodyExchangeAccountLinkedInDTO": {
         "type": "object",
@@ -4900,7 +6337,9 @@
             "example": "11e299dff731a5528322dbe47bf67f387d796b14178b0f8332aca76161c1c266574372381c7abe1ade31adaf6214942fd8889eacfa56e3e4beba8f0620f36d32b62fd9fe7afa24214d4da9ee026c8db8bda5aeb48dc8c2ba50bbcd56821e900e8332a34ceae0c9ea4543cec428b8dfc87eb72a0735f220f8812737dbb13aab302c7e8d07e91d75f80ab41e9e8bbd35a1a41d43dcaac322739dd0c165cf0661ef6a78c94467b2f3e528c4baed1b7cdfaa04dd51678839d90ba4f5bbb4a4d68952034ae9fb6527466778f0e2cb2e672ec947669d71ed997749083a08786d3b9c2f1fae21b8cfc00f2e51d04362d03de354"
           }
         },
-        "required": ["code"]
+        "required": [
+          "code"
+        ]
       },
       "BodyConnectAccountLinkedInDTO": {
         "type": "object",
@@ -4914,7 +6353,10 @@
             "example": "775576f02bebcc13b176c6cc217946a0f4e566e7cd2564ebb7003999d9ccd017f24acd8df14035d0f67f394909f7790fe30ed0be2889d67c67105f278cc26eed7065de54db7980cb07fe64af576e0f350972f1648a69568f7eea18792f6394b7b32277012d365a90e8c7d2ad34f0e23e52de15f1750ad6cf7a99405313f9beeb580b452f57dd9278ee592ad3f9879407fd11ba8d0ea95a770da93e3c81ac407fd310946d541bf94e025c556e189e60f49e10297d2720ef66393ec705319ad38bdd15028b9e5890d4c5db2c6d19659d5240b4581fe4a552b86d099f561d71e7fa45d33ef44fe066a2230c13223eff3a79276756dd2f6672f6a4aa7669f50f671e6b2c7027c4fb9424a5d679c7d2228964689907fd80ad2a433216580be40e7a84943c2eeddd045f29cacfe48a32f4a3557327aea196e38da1ad7c491e73698238c60a4642b320b31087954a2fdfd0b224f81720adfc07e0128c198e31d20b1674b1f7cb7251700e0dac416a6fdb6faebec272efceff7cf09b365d5be84ca9c58c5d891ea328092ab71328669080a08f12b518e6bf539dddd90c6b5f24bf2176a06301293a0ad0406b427e34ab25e91eddf7048693947ec6c2f42dc268be32bba5db9c15278b2b7d6bb2768eb1865a65575b20e6598b923aa4317161bc9a9e85c9ee6b1fa3dbdda22c28f6109f98be7f505f4da24d801cf987d1ef2d02755edcd752d062a612fbb84d01cf99f84b4a291f3626df2b909c5bd6793c7f729c4960f68b3c68265ca1bd865cac8ade52226ab4fa14fdea77703968838243440c6c02bad5aa32f4c3900cc9190cbad896bdcbd157979ccf568f196dbd2f9938b80adb1df21efec6563766eca23a748452e911e77e7fe5ef8476c58f489609f9899de0f2da0e9cbd3b95c00fe73ded734a2a10b7884c476bc7e13db0404bbb40fc78a75342c6d817be9240d2011ef4983d020da15c60ce41a928aa11e026b4392fad8d7995405b3141e26883260dca2a509f1c21e432db67f164582b19921b8198c861c2.d54e218b-e463-443f-8e44-bf89c66ccc64"
           }
         },
-        "required": ["organizationId", "token"]
+        "required": [
+          "organizationId",
+          "token"
+        ]
       },
       "BodyConnectTikTokDTO": {
         "type": "object",
@@ -4924,7 +6366,9 @@
             "example": "9402c20336a7c3ce2d8e4f763fd598ad7e09116ba611eeb4b429b31cce3dda1147e02582211155149b1024fd4995b352d3cc3a975dd18aca8d15b7c0d4531f340688f60649fa6ad053d2ca5b9de3df1cfae47261a16e3680416d82f85b025bdfc41154bdcbb5c01874499b76364ca959ecb5abb4cea1b798e947a6ecf6a471093d7ea7d9a40718f2fed191b2ced80405b6bbfa64bce0d577707be9286a980b9f0a8e0a335e6b1ab0559a2b9be13c2101ade91ab964e7a483edcb4834f2d60021b276f37f678407794a72ae0fc95c835006cc5d6c4f874072db08c786417f977760727edf006016e8b655533382675406"
           }
         },
-        "required": ["code"]
+        "required": [
+          "code"
+        ]
       },
       "BodyConnectShopeeDTO": {
         "type": "object",
@@ -4934,7 +6378,31 @@
             "example": "2ce01100f5a4d84fa5c8767060055c1b59a7d617ad1ef343fbded36317e15971d6d749ff333c9fc4f961e421b9559d7531ff3cd62d2c3f27163405aabfdf263b"
           }
         },
-        "required": ["code"]
+        "required": [
+          "code"
+        ]
+      },
+      "BodyInitFileDTO": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "example": "filename.mp4"
+          },
+          "size": {
+            "type": "number",
+            "example": 102400
+          },
+          "mimetype": {
+            "type": "string",
+            "example": "video/mp4"
+          }
+        },
+        "required": [
+          "filename",
+          "size",
+          "mimetype"
+        ]
       }
     }
   }

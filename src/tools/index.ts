@@ -8,6 +8,7 @@ import { registerChatTools } from "./chat.js";
 import { registerContentTools } from "./content.js";
 import { registerResearchTools } from "./research.js";
 import { registerAddonTools } from "./addon.js";
+import { registerStorageTools } from "./storage.js";
 
 export function registerAllTools(ctx: ToolContext): void {
   registerAccountTools(ctx);
@@ -17,4 +18,5 @@ export function registerAllTools(ctx: ToolContext): void {
   registerContentTools(ctx);
   registerResearchTools(ctx);
   registerAddonTools(ctx);
+  registerStorageTools(ctx);
 }
