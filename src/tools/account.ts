@@ -58,6 +58,20 @@ export function registerAccountTools(ctx: ToolContext): void {
 
   registerTool(
     ctx,
+    "repliz_get_account_statistics",
+    {
+      title: "Get Account Statistics",
+      description:
+        "Retrieve aggregated statistics and activity metrics for a specific connected account, including platform-specific overview metrics.",
+      inputSchema: {
+        accountId: z.string().describe("The Repliz account id (e.g. 680affa5ce12f2f72916f67e)."),
+      },
+    },
+    async (args) => ctx.client.get(`/public/account/${encodeURIComponent(args.accountId)}/statistic`)
+  );
+
+  registerTool(
+    ctx,
     "repliz_delete_account",
     {
       title: "Delete Account",
