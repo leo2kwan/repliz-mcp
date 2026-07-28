@@ -43,14 +43,16 @@ const additionalInfoSchema = z
   .object({
     isAiGenerated: z.boolean().default(false),
     isDraft: z.boolean().default(false),
+    isAutoAddMusic: z.boolean().default(false),
     collaborators: z.array(z.string()).default([]),
     music: musicSchema.optional(),
     products: z.array(productSchema).default([]),
     tags: z.array(z.string()).default([]),
     mentions: z.array(z.string()).default([]),
     link: z.string().default(""),
+    targetCountries: z.array(z.string()).default([]),
   })
-  .describe("Optional extras: collaborators, music, tagged products, hashtags, mentions, link.");
+  .describe("Optional extras: collaborators, music, tagged products, hashtags, mentions, link, target countries.");
 
 const replySchema = z.object({
   title: z.string().default(""),
@@ -65,12 +67,14 @@ const DEFAULT_META = { title: "", description: "", url: "" };
 const DEFAULT_ADDITIONAL_INFO = {
   isAiGenerated: false,
   isDraft: false,
+  isAutoAddMusic: false,
   collaborators: [] as string[],
   music: { id: "", artist: "", name: "", thumbnail: "" },
   products: [] as unknown[],
   tags: [] as string[],
   mentions: [] as string[],
   link: "",
+  targetCountries: [] as string[],
 };
 
 function buildSchedulePayload(args: {

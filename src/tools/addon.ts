@@ -67,4 +67,16 @@ export function registerAddonTools(ctx: ToolContext): void {
     },
     async (args) => ctx.client.get("/public/link/metadata", { url: args.url })
   );
+
+  registerTool(
+    ctx,
+    "repliz_get_me_addon",
+    {
+      title: "Get Account Addon Limits",
+      description:
+        "Retrieve addon information and resource allocations (accounts, operators, storage, Twitter/X addon) for your Repliz account.",
+      inputSchema: {},
+    },
+    async () => ctx.client.get("/public/me/addon")
+  );
 }

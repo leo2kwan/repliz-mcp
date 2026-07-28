@@ -9,6 +9,9 @@ import { registerContentTools } from "./content.js";
 import { registerResearchTools } from "./research.js";
 import { registerAddonTools } from "./addon.js";
 import { registerStorageTools } from "./storage.js";
+import { registerReportTools } from "./report.js";
+import { registerAutomationTools } from "./automation.js";
+import { registerAccountConnectTools } from "./account_connect.js";
 
 export function registerAllTools(ctx: ToolContext): void {
   registerAccountTools(ctx);
@@ -19,4 +22,7 @@ export function registerAllTools(ctx: ToolContext): void {
   registerResearchTools(ctx);
   registerAddonTools(ctx);
   registerStorageTools(ctx);
+  registerReportTools(ctx);
+  registerAutomationTools(ctx);
+  registerAccountConnectTools(ctx);
 }

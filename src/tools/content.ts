@@ -160,4 +160,22 @@ export function registerContentTools(ctx: ToolContext): void {
         { accountId: args.accountId }
       )
   );
+
+  registerTool(
+    ctx,
+    "repliz_delete_content",
+    {
+      title: "Delete Content",
+      description:
+        "Remove/delete a published post/content from a connected account. Irreversible — confirm before calling.",
+      inputSchema: {
+        contentId: z.string().describe("The content id to remove."),
+        accountId: z.string().describe("The account id that owns the content."),
+      },
+    },
+    async (args) =>
+      ctx.client.delete(`/public/content/${encodeURIComponent(args.contentId)}`, {
+        accountId: args.accountId,
+      })
+  );
 }

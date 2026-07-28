@@ -3,7 +3,16 @@
 import { z } from "zod";
 import { registerTool, type ToolContext } from "./helpers.js";
 
-const PLATFORMS = ["facebook", "instagram", "threads", "tiktok", "linkedin", "youtube"] as const;
+const PLATFORMS = [
+  "facebook",
+  "instagram",
+  "threads",
+  "tiktok",
+  "linkedin",
+  "youtube",
+  "shopee",
+  "twitter",
+] as const;
 
 export function registerAccountTools(ctx: ToolContext): void {
   registerTool(
@@ -68,6 +77,34 @@ export function registerAccountTools(ctx: ToolContext): void {
       },
     },
     async (args) => ctx.client.get(`/public/account/${encodeURIComponent(args.accountId)}/statistic`)
+  );
+
+  registerTool(
+    ctx,
+    "repliz_update_account_automation",
+    {
+      title: "Update Account Automation",
+      description:
+        "Update the default automation configurations (delete, reply, like, message, chat, story) for a connected account.",
+      inputSchema: {
+        accountId: z.string().describe("The Repliz account id."),
+        delete: z.record(z.unknown()).describe("Delete automation configuration object."),
+        reply: z.record(z.unknown()).describe("Reply automation configuration object."),
+        like: z.record(z.unknown()).describe("Like automation configuration object."),
+        message: z.record(z.unknown()).describe("Message automation configuration object."),
+        chat: z.record(z.unknown()).describe("Chat automation configuration object."),
+        story: z.record(z.unknown()).describe("Story automation configuration object."),
+      },
+    },
+    async (args) =>
+      ctx.client.put(`/public/account/${encodeURIComponent(args.accountId)}/automation`, {
+        delete: args.delete,
+        reply: args.reply,
+        like: args.like,
+        message: args.message,
+        chat: args.chat,
+        story: args.story,
+      })
   );
 
   registerTool(
