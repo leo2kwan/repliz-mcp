@@ -85,4 +85,19 @@ export function registerCommentTools(ctx: ToolContext): void {
         status: args.status,
       })
   );
+
+  registerTool(
+    ctx,
+    "repliz_delete_comment",
+    {
+      title: "Delete Comment",
+      description:
+        "Delete a comment from the social media platform by its id. Irreversible — confirm with the user before calling.",
+      inputSchema: {
+        commentId: z.string().describe("The comment id to delete."),
+      },
+    },
+    async (args) =>
+      ctx.client.delete(`/public/comment/${encodeURIComponent(args.commentId)}`)
+  );
 }
