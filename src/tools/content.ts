@@ -178,4 +178,27 @@ export function registerContentTools(ctx: ToolContext): void {
         accountId: args.accountId,
       })
   );
+
+  registerTool(
+    ctx,
+    "repliz_like_content_comment",
+    {
+      title: "Like Content Comment",
+      description:
+        "Like or add a reaction to a specific comment on a piece of content using a connected account.",
+      inputSchema: {
+        contentId: z.string().describe("The content id containing the comment."),
+        commentId: z.string().describe("The comment id to like."),
+        accountId: z.string().describe("The account id used to perform the like action."),
+      },
+    },
+    async (args) =>
+      ctx.client.post(
+        `/public/content/${encodeURIComponent(args.contentId)}/like/${encodeURIComponent(
+          args.commentId
+        )}`,
+        undefined,
+        { accountId: args.accountId }
+      )
+  );
 }
